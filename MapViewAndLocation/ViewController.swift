@@ -12,7 +12,8 @@ import CoreLocation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var mymap: MKMapView!
+    
+   @IBOutlet weak var mymap: MKMapView!
     
     let locationM = CLLocationManager()
     
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
 
 
 }
-
+///MARK: - user Location
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
