@@ -23,11 +23,11 @@ class ViewController: UIViewController {
         locationM.requestWhenInUseAuthorization()
         locationM.startUpdatingLocation()
     }
-
-
 }
-///MARK: - user Location
+// MARK: - user Location
 extension ViewController: CLLocationManagerDelegate {
+    
+    // MARK: - func for update locations on user.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
@@ -36,7 +36,6 @@ extension ViewController: CLLocationManagerDelegate {
         mymap.setRegion(region, animated: true)
         mymap.showsUserLocation = true
         mymap.showsCompass = true
-        
         
     }
 }
